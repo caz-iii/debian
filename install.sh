@@ -114,13 +114,10 @@ mkdir ~/flameshots
 rm *.deb
 stow .
 
-# Homebrew
-echo "https://brew.sh/ "
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Powerlevel10k
 echo "https://github.com/romkatv/powerlevel10k"
-brew install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # zsh
 echo "Switch shell to zsh:"
@@ -134,4 +131,4 @@ echo "git config --global user.email"
 echo "git config --global credential.helper store"
 echo "git push or pull"
 
-timedatectl set-local-rtc 1 --adjust-system-clock
+sudo timedatectl set-local-rtc 1 --adjust-system-clock

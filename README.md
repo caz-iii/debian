@@ -37,6 +37,12 @@ This repo is to serve as a backup to myself (or anyone interested) of my configu
 
 The script is intended to run on a fresh Debian installation (I use the stable branch). You can get that [here](https://debian.org/download)
 
+git is required to clone the repo. You can install it with:
+
+```bash
+sudo apt install git
+```
+
 ### Installation
 
 1. Clone the repo
@@ -95,7 +101,6 @@ For support of GeForce 600 series and newer GPUs (supported devices). For older 
 
 Add "contrib", "non-free" and "non-free-firmware" components to /etc/apt/sources.list, for example:
 
-# Debian Bookworm
 deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
 
 Update the list of available packages, then we can install the nvidia-driver package, plus the necessary firmware:
@@ -124,7 +129,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
-5. Install desired themes, other software, and reboot.
+5. Install desired themes, other software, etc.
+
+6. Log out `exit` and log back in. 
+
+7. `startx`
 
 <!-- USAGE EXAMPLES -->
 ## Usage
